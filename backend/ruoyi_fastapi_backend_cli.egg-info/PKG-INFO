@@ -1,0 +1,5 @@
+Metadata-Version: 2.4
+Name: ruoyi-fastapi-backend-cli
+Version: 2.0.0
+Summary: RuoYi-FastAPI backend internal CLI entrypoint
+Requires-Python: >=3.10
