@@ -48,6 +48,11 @@ export default defineConfig({
     open: false, // 运行后会自动打开浏览器, 默认关闭
     base: './', // 生产环境路径
     proxy: {
+      // 识典古籍后端（RuoYi-FastAPI + module_guji）
+      '^/api/ancientlib': {
+        target: 'http://127.0.0.1:9099',
+        changeOrigin: true
+      },
       // 石屏测试环境
       '^/zgis': {
         // target: 'http://192.168.2.227:17789/giszjgkyszhjc/zgis',

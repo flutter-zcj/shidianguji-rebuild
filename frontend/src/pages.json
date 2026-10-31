@@ -5,96 +5,170 @@
       "^u--(.*)": "uview-plus/components/u-$1/u-$1.vue",
       "^up-(.*)": "uview-plus/components/u-$1/u-$1.vue",
       "^u-([^-].*)": "uview-plus/components/u-$1/u-$1.vue",
+      "^lg-([^-].*)": "zhpub_ap/login/components/lg-$1/lg-$1.vue",
+      "^ol-([^-].*)": "zhpub_com/src/zpub_map/components/ol-$1/ol-$1.vue",
+      "^cx2-([^-].*)": "zhpub_com/src/zpub_att/components/cx2-$1/cx2-$1.vue",
       "^(?!z-paging-refresh|z-paging-load-more)z-paging(.*)": "z-paging/components/z-paging$1/z-paging$1.vue",
       "^uni-(.*)": "@dcloudio/uni-ui/lib/uni-$1/uni-$1.vue"
     }
   },
   "pages": [
     {
-      "name": "home",
-      "path": "pages/index/index",
+      "name": "index",
+      "path": "pages/guji/index/index",
       "style": {
-        "navigationBarTitleText": "识典古籍"
+        "navigationBarTitleText": "识典古籍",
+        "enablePullDownRefresh": true
       }
     },
     {
-      "name": "bookshelf",
-      "path": "pages/bookshelf/index",
+      "name": "shelf",
+      "path": "pages/guji/shelf/shelf",
       "style": {
-        "navigationBarTitleText": "我的书架"
+        "navigationBarTitleText": "书架",
+        "enablePullDownRefresh": true
       }
     },
     {
       "name": "category",
-      "path": "pages/category/index",
+      "path": "pages/guji/category/category",
       "style": {
-        "navigationBarTitleText": "古籍分类"
+        "navigationBarTitleText": "分类"
       }
     },
     {
       "name": "mine",
-      "path": "pages/mine/index",
+      "path": "pages/guji/mine/mine",
       "style": {
-        "navigationBarTitleText": "我的"
+        "navigationBarTitleText": "我的",
+        "enablePullDownRefresh": true
       }
     },
     {
-      "name": "login",
-      "path": "pages/login/index",
+      "name": "book",
+      "path": "pages/guji/book/book",
       "style": {
-        "navigationBarTitleText": "登录"
-      }
-    },
-    {
-      "name": "book-detail",
-      "path": "pages/book/detail",
-      "style": {
-        "navigationBarTitleText": "书目详情"
+        "navigationBarTitleText": "书籍详情"
       }
     },
     {
       "name": "reader",
-      "path": "pages/reader/index",
+      "path": "pages/guji/reader/reader",
       "style": {
-        "navigationBarTitleText": "阅读"
+        "navigationBarTitleText": "阅读",
+        "navigationBarBackgroundColor": "#efe6d2"
       }
     },
     {
-      "name": "history",
-      "path": "pages/history/index",
+      "name": "search",
+      "path": "pages/guji/search/search",
       "style": {
-        "navigationBarTitleText": "阅读历史"
+        "navigationBarTitleText": "搜索"
+      }
+    },
+    {
+      "name": "quotation",
+      "path": "pages/guji/quotation/quotation",
+      "style": {
+        "navigationBarTitleText": "名句"
+      }
+    },
+    {
+      "name": "notes",
+      "path": "pages/guji/notes/notes",
+      "style": {
+        "navigationBarTitleText": "笔记与书签"
+      }
+    },
+    {
+      "name": "topic",
+      "path": "pages/guji/topic/topic",
+      "style": {
+        "navigationBarTitleText": "我的书单"
+      }
+    },
+    {
+      "name": "notice",
+      "path": "pages/guji/notice/notice",
+      "style": {
+        "navigationBarTitleText": "通知"
+      }
+    },
+    {
+      "name": "settings",
+      "path": "pages/guji/settings/settings",
+      "style": {
+        "navigationBarTitleText": "阅读设置"
+      }
+    },
+    {
+      "name": "audio",
+      "path": "pages/guji/audio/audio",
+      "style": {
+        "navigationBarTitleText": "听书"
+      }
+    },
+    {
+      "name": "video",
+      "path": "pages/guji/video/video",
+      "style": {
+        "navigationBarTitleText": "讲书"
+      }
+    },
+    {
+      "name": "ai",
+      "path": "pages/guji/ai/ai",
+      "style": {
+        "navigationBarTitleText": "AI 问答"
+      }
+    },
+    {
+      "name": "login",
+      "path": "pages/login/login",
+      "style": {
+        "navigationBarTitleText": "登录"
       }
     }
   ],
+  "globalStyle": {
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "识典古籍",
+    "navigationBarBackgroundColor": "#8c5a3c",
+    "backgroundColor": "#FBF7F0",
+    "app-plus": {
+      "bounce": "none"
+    }
+  },
   "tabBar": {
-    "color": "#999999",
-    "selectedColor": "#8B5E3C",
-    "backgroundColor": "#FFFFFF",
-    "borderStyle": "black",
+    "color": "#9a8b7a",
+    "selectedColor": "#8c5a3c",
+    "backgroundColor": "#fbf7f0",
+    "borderStyle": "white",
     "list": [
       {
-        "pagePath": "pages/index/index",
-        "text": "首页"
+        "pagePath": "pages/guji/index/index",
+        "text": "首页",
+        "iconPath": "static/tab/home.png",
+        "selectedIconPath": "static/tab/home_on.png"
       },
       {
-        "pagePath": "pages/bookshelf/index",
-        "text": "书架"
+        "pagePath": "pages/guji/shelf/shelf",
+        "text": "书架",
+        "iconPath": "static/tab/shelf.png",
+        "selectedIconPath": "static/tab/shelf_on.png"
       },
       {
-        "pagePath": "pages/category/index",
-        "text": "分类"
+        "pagePath": "pages/guji/category/category",
+        "text": "分类",
+        "iconPath": "static/tab/category.png",
+        "selectedIconPath": "static/tab/category_on.png"
       },
       {
-        "pagePath": "pages/mine/index",
-        "text": "我的"
+        "pagePath": "pages/guji/mine/mine",
+        "text": "我的",
+        "iconPath": "static/tab/mine.png",
+        "selectedIconPath": "static/tab/mine_on.png"
       }
     ]
-  },
-  "globalStyle": {
-    "navigationBarTextStyle": "black",
-    "navigationBarTitleText": "识典古籍",
-    "navigationBarBackgroundColor": "#F5EFE6",
-    "backgroundColor": "#F8F6F1"
   }
 }
